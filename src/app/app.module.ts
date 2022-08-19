@@ -9,7 +9,7 @@ import { EditComponent } from './edit/edit.component';
 import { ContactslistComponent } from './contactslist/contactslist.component';
 import {FormsModule} from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
-import { SelectedcontactComponent } from './selectedcontact/selectedcontact.component';
+//import { SelectedcontactComponent } from './selectedcontact/selectedcontact.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -17,7 +17,7 @@ import { SelectedcontactComponent } from './selectedcontact/selectedcontact.comp
     EditComponent,
     //ContactListComponent,
     ContactslistComponent,
-    SelectedcontactComponent
+    //SelectedcontactComponent
   ],
   imports: [
     BrowserModule,

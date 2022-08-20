@@ -1,17 +1,18 @@
 <div class="d-fle">
     <div class="c">        
         <h4 class="list-group-header">CONTACTS</h4>
-        <ul style="text-decoration: none" *ngFor="let contact of contacts,let i=index" 
-        class="list-group border" (click)="selec(i)" [ngClass]="{'s':fetch.selectedIndex===i}" >
+        <ul *ngFor="let contact of contacts,let i=index" 
+        class="list-group border pointer" (click)="selec(i)" [ngClass]="{'s':fetch.selectedIndex===i}" >
             <li class='list-group-items'>{{contact.name}}</li>
             <li class="list-group-items">{{contact.phno}}</li>
             <li class="list-group-items">{{contact.email}}</li>  
         </ul>
     </div>  
     <div class="p-3 container shadow m-5">
-        <form class="w-100" (ngSubmit)="onFormSubmit(form)" #form="ngForm">
+        <form (ngSubmit)="onFormSubmit(form)" #form="ngForm" class="">
+            <div class="margin">
             <div class="m-1">
-                <label for="Name" class="form-label">Name<span class="text-danger">*</span></label>
+                <label for="Name" class="form-label bold">Name<span class="text-danger">*</span></label>
                 <input type="text" class="form-control" name="userName" #username="ngModel" ngModel required minlength="6" [(ngModel)]="contacts[fetch.selectedIndex].name">
                 <p class="alert alert-danger m-1" id="username" *ngIf="(username.touched && !(username.valid))">
                 Username is required
@@ -19,36 +20,37 @@
                 
             </div>
             <div class="m-1">
-                <label for="Email" class="form-label">Email <span class="text-danger">*</span></label>
+                <label for="Email" class="bold form-label">Email <span class="text-danger">*</span></label>
                 <input class="form-control" id="Email" type="email" name="Email" ngModel required email #Email="ngModel"[(ngModel)]="contacts[fetch.selectedIndex].email">
                 <div class="alert alert-danger m-1" id="username" *ngIf="(Email.touched && !(Email.valid))">
                     Email is required
                 </div>
             </div>
             <div class="row mt-1 mb-1">
-                <div class="col-6">
-                    <label for="phn" class="form-label">Mobile <span class="text-danger">*</span></label>
+                <div class="col-6 me-0">
+                    <label for="phn" class="form-label bold">Mobile <span class="text-danger">*</span></label>
                     <input class="form-control" type="tel" name="mobile" ngModel required #mobile="ngModel" [(ngModel)]="contacts[fetch.selectedIndex].phno">
                     <div class="alert alert-danger" *ngIf="(mobile.touched && !(mobile.valid))">
                         Please enter your Mobile Number
                     </div>
                 </div>
                 <div class="col-6">
-                    <label for="landline" class="form-label">Landline</label>
+                    <label for="landline" class=" bold form-label">Landline</label>
                     <input class="form-control" type="tel" id="landline">
                 </div>
             </div>
             <div class="mt-1 mb-1">
-                <label for="wb">Website</label>
+                <label for="wb" class="bold form-label">Website</label>
                 <input class="form-control" type="url" id="wb">
             </div>
             <div class="mt-1 mb-1">
-                <label for="address" class="mb-1">Address</label>
+                <label for="address" class=" bold mb-1">Address</label>
                 <br>
-                <textarea name="" id="address" cols="100" rows="5" class=""></textarea>
+                <textarea name="" id="address" cols="100" rows="5" class="form-control"></textarea>
             </div>
-            <div class="container text-center">
-                <button class="btn btn-primary" [disabled]="!form.valid">Submit</button>
+            </div>
+            <div class="container text-end float-end">
+                <button class="btn btn-success ps-5 pe-5" [disabled]="!form.valid">Add</button>
             </div>
         </form>
     </div>

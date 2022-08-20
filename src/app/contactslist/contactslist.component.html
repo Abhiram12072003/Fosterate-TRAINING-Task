@@ -2,8 +2,8 @@
     
     <div class="c" *ngIf="fetch.showcontact">        
         <h4 class="list-group-header">CONTACTS</h4>
-        <ul style="text-decoration: none" *ngFor="let contact of contacts,let i=index" 
-        class="list-group border" (click)="selec(i)" [ngClass]="{'s' : fetch.selectedIndex===i}">
+        <ul *ngFor="let contact of contacts,let i=index" 
+        class="list-group border pointer" (click)="selec(i)" [ngClass]="{'s' : fetch.selectedIndex===i}">
             <li class='list-group-items'>{{contact.name}}</li>
             <li class="list-group-items">{{contact.phno}}</li>
             <li class="list-group-items">{{contact.email}}</li>  

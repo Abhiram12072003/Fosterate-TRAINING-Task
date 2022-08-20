@@ -24,6 +24,10 @@ body{
     display: flex;
 }
 
+.bold{
+    font-weight: bold;
+}
+
 a{
     color: white;
 }
@@ -71,6 +75,7 @@ a{
     margin-left: 20px;
     color: rgb(75, 74, 74);
     font-size:18px;
+    border-radius:0 !important
 }
 
 .border{
@@ -92,12 +97,18 @@ a{
     color: black;
 }
 
+.margin{
+    margin-right: 145px;
+}
+
+
 .c{
     margin-top:1px;
 }
 .container{
-    padding-top: 14px;
+    padding-top: 2px;
     margin: 5px 0px 0px 74px;
+    width:50%;
 }
 
 .div-title{
@@ -152,4 +163,7 @@ a{
 
 .s{
     background-color: #cfe7f3;
+}
+.pointer{
+    cursor: pointer;
 }

@@ -20,6 +20,7 @@ body{
     font-family: 'Open Sans', sans-serif;
 }
 
+
 .nav-tabs{
     display: flex;
 }
@@ -27,6 +28,11 @@ body{
 a{
     color: white;
 }
+
+.pointer{
+    cursor: pointer;
+}
+
 
 .nav-item{
     color: white; 
@@ -71,6 +77,7 @@ a{
     margin-left: 20px;
     color: rgb(75, 74, 74);
     font-size:18px;
+    border-radius:0 !important
 }
 
 .border{

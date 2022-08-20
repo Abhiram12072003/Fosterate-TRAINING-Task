@@ -23,9 +23,11 @@ body{
 .nav-tabs{
     display: flex;
 }
+
 a{
     color: white;
 }
+
 .nav-item{
     color: white; 
     margin-left:10px;
@@ -63,7 +65,9 @@ a{
     margin-left: 20px;
     color: rgb(75, 74, 74);
     font-size:18px;
+    border-radius:0 !important
 }
+
 
 .border{
     border: 1px solid #CCCCCC;
@@ -87,9 +91,16 @@ a{
 .c{
     margin-top:1px;
 }
+
+.margin{
+    margin-right: 148px;
+}
+
+
 .container{
-    padding-top: 14px;
-    margin: 5px 317px 0px 74px;
+    padding-top: 5px;
+    margin: 2px 0px 0px 80px;
+    width:50%;
 }
 
 .div-title{
@@ -116,6 +127,7 @@ a{
     display: flex;
     margin-top: 45px;
 }
+
 .d-fle{
     display: flex;
 }
@@ -129,4 +141,8 @@ a{
     margin-left: 6px;
     margin-top: 2px;
     margin-right: 6px;
+}
+
+.bold{
+    font-weight: bold;
 }

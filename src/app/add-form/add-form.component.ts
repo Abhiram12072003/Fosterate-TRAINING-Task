@@ -21,7 +21,8 @@ export class AddFormComponent implements OnInit {
     console.log("a",a);
     const c:Contact={name:a.userName!,phno:(a.mobile)!,email:a.Email!};
     console.log("c",c);
-    Contacts.push(c);    
+    Contacts.push(c);  
+    this.fetch.showcontact=true;
   }
   
   constructor(private router:Router,private fetch:FetchcontactsService) { }

@@ -13,7 +13,7 @@
             <div class="margin">
             <div class="m-1">
                 <label for="Name" class="form-label bold">Name<span class="text-danger">*</span></label>
-                <input type="text" class="form-control" name="userName" #username="ngModel" ngModel required minlength="6" [(ngModel)]="contacts[fetch.selectedIndex].name">
+                <input type="text" class="form-control" name="userName" #username="ngModel" ngModel required minlength="6" [(ngModel)]="name">
                 <p class="alert alert-danger m-1" id="username" *ngIf="(username.touched && !(username.valid))">
                 Username is required
                 </p>
@@ -21,7 +21,7 @@
             </div>
             <div class="m-1">
                 <label for="Email" class="bold form-label">Email <span class="text-danger">*</span></label>
-                <input class="form-control" id="Email" type="email" name="Email" ngModel required email #Email="ngModel"[(ngModel)]="contacts[fetch.selectedIndex].email">
+                <input class="form-control" id="Email" type="email" name="Email" ngModel required email #Email="ngModel"[(ngModel)]="email">
                 <div class="alert alert-danger m-1" id="username" *ngIf="(Email.touched && !(Email.valid))">
                     Email is required
                 </div>
@@ -29,7 +29,7 @@
             <div class="row mt-1 mb-1">
                 <div class="col-6 me-0">
                     <label for="phn" class="form-label bold">Mobile <span class="text-danger">*</span></label>
-                    <input class="form-control" type="tel" name="mobile" ngModel required #mobile="ngModel" [(ngModel)]="contacts[fetch.selectedIndex].phno">
+                    <input class="form-control" type="tel" name="mobile" ngModel required #mobile="ngModel" [(ngModel)]="phno">
                     <div class="alert alert-danger" *ngIf="(mobile.touched && !(mobile.valid))">
                         Please enter your Mobile Number
                     </div>
@@ -50,7 +50,7 @@
             </div>
             </div>
             <div class="container text-end float-end">
-                <button class="btn btn-success ps-5 pe-5" [disabled]="!form.valid">Add</button>
+                <button class="btn btn-success ps-5 pe-5" [disabled]="!form.valid">Edit</button>
             </div>
         </form>
     </div>

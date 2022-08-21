@@ -12,9 +12,9 @@ export class FetchcontactsService {
   getContacts():Observable<Contact[]>{
     return of(Contacts);
   }
-
-  getContact(name:String):Observable<Contact>{
-    const contact=Contacts.find(h=>h.name==name)!;
+  
+  getContact(idx:number):Observable<Contact>{
+    const contact=Contacts.find(h=>h==Contacts[idx])!;
     return of(contact);
   }
 

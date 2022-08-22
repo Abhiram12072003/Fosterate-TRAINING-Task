@@ -64,17 +64,18 @@ a{
     font-weight: bolder;
     padding-top: 14px;
     padding-bottom: 12px;
-    margin:0px 0px 0px 20px;
+    font-size: 20px;
+    margin:0px 0px 5px 20px;
 }
 
 .list-group{
     padding: 12px 0px 9px 14px;
     margin-top:0px;
     line-height: 1.5em;
-    width: 279px;
+    width: 310px;
     display: block;
     margin-bottom: 0px;
-    margin-left: 20px;
+    margin-left: 30px;
     color: rgb(75, 74, 74);
     font-size:18px;
     border-radius:0 !important
@@ -146,10 +147,17 @@ a{
     
 }
 
+.mr-1{
+    margin-right:3px;
+}
+
+.mr-2{
+    margin-top: 3px;
+}
 .icon-text{
     margin-left: 6px;
     margin-top: 2px;
-    margin-right: 3px;
+    margin-right: 5px;
 }
 
 .right{

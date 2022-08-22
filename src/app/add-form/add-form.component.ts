@@ -25,7 +25,7 @@ export class AddFormComponent implements OnInit {
     this.fetch.showcontact=true;
   }
   
-  constructor(private router:Router,private fetch:FetchcontactsService) { }
+  constructor(private router:Router,public fetch:FetchcontactsService) { }
   
   onKey(event:any){
     const ipv=event.target.value;

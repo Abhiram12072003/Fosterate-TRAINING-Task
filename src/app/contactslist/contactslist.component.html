@@ -1,7 +1,7 @@
 <div class="d-fle">         
     
     <div class="c" *ngIf="fetch.showcontact">        
-        <h4 class="list-group-header">CONTACTS</h4>
+        <p class="list-group-header">CONTACTS</p>
         <ul *ngFor="let contact of contacts,let i=index" 
         class="list-group border pointer" (click)="selec(i)" [ngClass]="{'s' : fetch.selectedIndex===i}">
             <li class='list-group-items'>{{contact.name}}</li>
@@ -43,7 +43,7 @@
     </div>
     
     <div class="d-flex right" *ngIf="fetch.showcontact">
-        <img class="icon" src="../assets/images/Edit-icon.png" width="16px" (click)="clickEdit()" height="18px" alt="" style="cursor: pointer;">
+        <img class="icon mr-2" src="../assets/images/Edit-icon.png" width="16px" (click)="clickEdit()" height="18px" alt="" style="cursor: pointer;">
         <div class="icon-text m2-2" (click)="clickEdit()" style="cursor: pointer;">EDIT</div>
         <img class="icon" src="../assets/images/delete1.png" width="13px" (click)="clickDelete()" height="23px" alt="" style="cursor: pointer;">
         <div class="icon-text" (click)="clickDelete()" style="cursor: pointer;">DELETE</div>

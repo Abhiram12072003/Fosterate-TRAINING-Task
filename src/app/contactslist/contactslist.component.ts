@@ -30,6 +30,7 @@ export class ContactslistComponent implements OnInit {
     console.log("Hi");
     this.router.navigate(['/edit']);
   }
+  address:any=Contacts[this.fetch.selectedIndex].address.split(",");
 
   clickDelete(){
     if(Contacts.length==1){

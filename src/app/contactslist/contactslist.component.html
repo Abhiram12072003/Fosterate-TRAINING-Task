@@ -22,17 +22,17 @@
                 <div class="ms-3">{{contacts[fetch.selectedIndex].phno}}</div>
             </div>            
             <div class="div-sub-title">
-                Landline:
+                Landline:{{contacts[fetch.selectedIndex].landline}}
             </div>            
             <div class="div-sub-title">
-                Website:
+                Website:{{contacts[fetch.selectedIndex].website}}
             </div>        
             <div class="div-sub-title">
                 <div>Address:</div>
                 <div>
-                    <div class="div-text">hyderabad,</div>
-                    <div class="div-text">Telangana,</div>
-                    <div class="div-text">500061</div>
+                    <div class="div-text" *ngFor="let add of address">{{ add }},</div>
+                    
+            
                 </div>
             </div> 
         </div>
@@ -44,7 +44,7 @@
     
     <div class="d-flex right" *ngIf="fetch.showcontact">
         <img class="icon mr-2" src="../assets/images/Edit-icon.png" width="16px" (click)="clickEdit()" height="18px" alt="" style="cursor: pointer;">
-        <div class="icon-text m2-2" (click)="clickEdit()" style="cursor: pointer;">EDIT</div>
+        <div class="icon-text mr-1" (click)="clickEdit()" style="cursor: pointer;">EDIT</div>
         <img class="icon" src="../assets/images/delete1.png" width="13px" (click)="clickDelete()" height="23px" alt="" style="cursor: pointer;">
         <div class="icon-text" (click)="clickDelete()" style="cursor: pointer;">DELETE</div>
     </div>

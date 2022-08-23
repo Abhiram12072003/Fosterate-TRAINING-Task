@@ -1,7 +1,7 @@
 
 <div class="d-fle">
     <div class="c" *ngIf="fetch.showcontact">        
-        <h4 class="list-group-header">CONTACTS</h4>
+        <p class="list-group-header">CONTACTS</p>
         <ul *ngFor="let contact of contacts,let i=index" 
         class="list-group border pointer"  (click)="select(i)">
             <li class='list-group-items'>{{contact.name}}</li>
@@ -36,17 +36,17 @@
                 </div>
                 <div class="col-6">
                     <label for="landline" class="form-label bold">Landline</label>
-                    <input class="form-control" type="tel" id="landline">
+                    <input class="form-control" ngModel name="landline" #landline="ngModel"  id="landline">
                 </div>
             </div>
             <div class="mt-1 mb-1">
                 <label for="wb" class="form-label bold">Website</label>
-                <input class="form-control" type="url" id="wb">
+                <input class="form-control" ngModel name="website" #website="ngModel" type="url" id="wb">
             </div>
             <div class="mt-1 mb-1">
                 <label for="address" class="mb-1 bold ">Address</label>
                 <br>
-                <textarea name="" id="address" cols="100" rows="5" class="form-control"></textarea>
+                <textarea name="" id="address" cols="100" rows="5" ngModel name="address" #address="ngModel" class="form-control"></textarea>
             </div>
             </div>
             <div class="container text-end float-end">

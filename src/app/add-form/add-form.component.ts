@@ -19,7 +19,7 @@ export class AddFormComponent implements OnInit {
   onFormSubmit(f:any){
     const a=f.value;
     console.log("a",a);
-    const c:Contact={name:a.userName!,phno:(a.mobile)!,email:a.Email!};
+    const c:Contact={name:a.userName!,phno:(a.mobile)!,email:a.Email!,landline:(a.landline)!,address:(a.address)!,website:(a.website)!};
     console.log("c",c);
     Contacts.push(c);  
     this.fetch.showcontact=true;

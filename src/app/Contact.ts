@@ -3,6 +3,6 @@ export interface Contact{
     phno:String,
     email:String,
     landline:String,
-    address:String,
+    address:String[],
     website:String
 }

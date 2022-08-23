@@ -15,7 +15,7 @@
             <div class="margin">
             <div class="">
                 <label for="Name" class="form-label bold">Name<span class="text-danger">*</span></label>
-                <input type="text" class="form-control" name="userName" #username="ngModel" (keyup)="onKey($event)" ngModel required>
+                <input type="text" class="form-control" name="userName" #username="ngModel" ngModel required>
                 <p class="alert alert-danger m-1" id="username" *ngIf="(username.touched && !(username.valid))">
                 Username is required</p>
             </div>
@@ -46,7 +46,7 @@
             <div class="mt-1 mb-1">
                 <label for="address" class="mb-1 bold ">Address</label>
                 <br>
-                <textarea name="" id="address" cols="100" rows="5" ngModel name="address" #address="ngModel" class="form-control"></textarea>
+                <textarea cols="100" rows="5" ngModel name="address" #address="ngModel" class="form-control"></textarea>
             </div>
             </div>
             <div class="container text-end float-end">

@@ -30,9 +30,10 @@
             <div class="div-sub-title">
                 <div>Address:</div>
                 <div>
-                    <div class="div-text" *ngFor="let add of address">{{ add }},</div>
-                    
-            
+                    <div *ngFor="let add of address,let i=index">
+                      <div class="div-text" *ngIf="i!=address.length-1">{{add}},</div>
+                        <div class="div-text " *ngIf="i==address.length-1">{{add}}</div>
+                    </div>
                 </div>
             </div> 
         </div>

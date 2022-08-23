@@ -12,10 +12,19 @@ import { Router } from '@angular/router';
 export class ContactslistComponent implements OnInit {
 
   contacts:Contact[]=[];
-  constructor(public fetch:FetchcontactsService,private router:Router){    }
-  
+  constructor(public fetch:FetchcontactsService,private router:Router){
+    //this.address=Contacts[this.fetch.selectedIndex].address;
+    if(this.fetch.showcontact==true){
+      this.address=Contacts[this.fetch.selectedIndex].address;
+      }
+    }
+  address:any;
   ngOnInit(){
     this.getContacts();
+    if(this.fetch.showcontact==true){
+    this.address=Contacts[this.fetch.selectedIndex].address;
+    }
+
   }
 
   getContacts():void{
@@ -30,7 +39,7 @@ export class ContactslistComponent implements OnInit {
     console.log("Hi");
     this.router.navigate(['/edit']);
   }
-  address:any=Contacts[this.fetch.selectedIndex].address.split(",");
+  
 
   clickDelete(){
     if(Contacts.length==1){

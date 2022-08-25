@@ -23,7 +23,7 @@ export class ContactslistComponent implements OnInit {
     this.getContacts();
     if(this.fetch.showcontact==true){
     this.address=Contacts[this.fetch.selectedIndex].address;
-    }
+    } 
 
   }
 
@@ -33,6 +33,9 @@ export class ContactslistComponent implements OnInit {
 
   selec(c:number){
     this.fetch.selectedIndex=c;
+    if(this.fetch.showcontact==true){
+      this.address=Contacts[this.fetch.selectedIndex].address;
+      } 
   }
   
   clickEdit(){

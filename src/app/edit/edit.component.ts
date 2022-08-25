@@ -21,10 +21,10 @@ export class EditComponent implements OnInit {
   onFormSubmit(f:any){
     const a=f.value;
     console.log("a",a);
-    const c:Contact={name:a.userName!,phno:(a.mobile)!,email:a.Email!,address:(a.Address)!,website:(a.Website)!,landline:(a.Landline)!};
+    const c:Contact={name:a.userName!,phno:(a.mobile)!,email:a.Email!,address:(a.Address.split(","))!,website:(a.Website)!,landline:(a.Landline)!};
     console.log("c",c);
     Contacts[this.fetch.selectedIndex]=c; 
-  
+    this.router.navigate(['/']);
   }
   getContacts():void{
     this.fetch.getContacts().subscribe(contacts=>this.contacts=contacts);
@@ -35,11 +35,12 @@ export class EditComponent implements OnInit {
     this.name=Contacts[this.fetch.selectedIndex].name;
     this.email=Contacts[this.fetch.selectedIndex].email;
     this.phno=Contacts[this.fetch.selectedIndex].phno;
-    this.address=Contacts[this.fetch.selectedIndex].address;
+    this.address=Contacts[this.fetch.selectedIndex].address.join(',');
     this.website=Contacts[this.fetch.selectedIndex].website;
     this.landline=Contacts[this.fetch.selectedIndex].landline;
+    
   }
-  constructor(public fetch:FetchcontactsService) {
+  constructor(public fetch:FetchcontactsService,private router:Router) {
    }
 
   ngOnInit(): void {
@@ -47,13 +48,13 @@ export class EditComponent implements OnInit {
     this.name=Contacts[this.fetch.selectedIndex].name;
     this.email=Contacts[this.fetch.selectedIndex].email;
     this.phno=Contacts[this.fetch.selectedIndex].phno;
-    this.address=Contacts[this.fetch.selectedIndex].address;
+    this.address=Contacts[this.fetch.selectedIndex].address.join(',');
     this.website=Contacts[this.fetch.selectedIndex].website;
     this.landline=Contacts[this.fetch.selectedIndex].landline;    
   }
   select(i:number){
     console.log("Hi");
-   
+     
   }
 
 }

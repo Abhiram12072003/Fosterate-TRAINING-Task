@@ -23,6 +23,8 @@ export class AddFormComponent implements OnInit {
     console.log("c",c);
     Contacts.push(c);  
     this.fetch.showcontact=true;
+    this.fetch.selectedIndex=Contacts.length-1;
+    this.router.navigate(['/']);
   }
   
   constructor(private router:Router,public fetch:FetchcontactsService) { }

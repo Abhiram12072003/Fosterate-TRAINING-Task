@@ -1,0 +1,28 @@
+@use './contacts-book.scss';
+
+.margin{
+    margin-right: 148px;
+}
+
+.container{
+    padding-top: 5px;
+    margin: 2px 0px 0px 80px;
+    width:50%;
+}
+
+.ms-3{
+    margin-left: 5px;
+}
+
+.d-flex{
+    display: flex;
+    margin-top: 45px;
+}
+
+.d-fle{
+    display: flex;
+}
+
+.bold{
+    font-weight: bold;
+}

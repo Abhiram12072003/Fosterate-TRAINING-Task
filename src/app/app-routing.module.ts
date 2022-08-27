@@ -7,7 +7,6 @@ import { EditComponent } from './edit/edit.component';
 
 const routes: Routes = [
   { path:'',component:ContactslistComponent},
- // { path:'',redirectTo:''},
   { path: 'add', component: AddFormComponent},
   {path:'edit',component:EditComponent}
 ];

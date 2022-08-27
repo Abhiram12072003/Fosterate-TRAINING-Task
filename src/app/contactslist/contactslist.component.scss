@@ -1,55 +1,16 @@
-body{
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; 
-    margin: 0px;
+@use '../contacts-book.scss';
+
+@mixin adjustment {
+    padding-top: 14px;
+    margin: 5px 0px 0px 74px;
 }
 
-.header{
-    color: white;   
-    background-color: #3399CC;
-    margin: 0px;
-    font-weight: lighter;
-    font-size: 58px;
-    padding: 18px 0px 28px 23px; 
+@mixin margin-top($margin-top:1px)  {
+     margin-top:margin-top;    
 }
 
-.nav-bar{
+display-flex {
     display: flex;
-    background-color:#333333;
-    height: 40px; 
-    justify-content: space-between;
-    font-family: 'Open Sans', sans-serif;
-}
-
-
-.nav-tabs{
-    display: flex;
-}
-
-a{
-    color: white;
-}
-
-.pointer{
-    cursor: pointer;
-}
-
-
-.nav-item{
-    color: white; 
-    margin-left:10px;
-    padding: 9px 16px 12px;
-    font-weight: bolder;
-}
-
-.active{
-    background-color:orange;
-    border-left: 3px solid white;
-    color: black; 
-}
-
-.nav-icon{
-    margin-right: 11px;
-    padding: 7px;
 }
 
 .body{
@@ -57,32 +18,6 @@ a{
     padding-top: 4px; 
     margin-top: 3px; 
     margin-left: 6px;
-}
-
-.list-group-header{
-    color: black; 
-    font-weight: bolder;
-    padding-top: 14px;
-    padding-bottom: 12px;
-    font-size: 20px;
-    margin:0px 0px 5px 20px;
-}
-
-.list-group{
-    padding: 12px 0px 9px 14px;
-    margin-top:0px;
-    line-height: 1.5em;
-    width: 310px;
-    display: block;
-    margin-bottom: 0px;
-    margin-left: 30px;
-    color: rgb(75, 74, 74);
-    font-size:18px;
-    border-radius:0 !important
-}
-
-.border{
-    border: 1px solid #CCCCCC;
 }
 
 .border-start{
@@ -93,35 +28,28 @@ a{
     border-right:1px solid #CCCCCC;
 }
 
-.list-group-items{
-    padding: 0.5px;
-    margin-left: 6px;
-    list-style: none;
-    color: black;
-}
-
 .c{
     margin-top:1px;
 }
-.container{
-    padding-top: 14px;
-    margin: 5px 0px 0px 74px;
-}
 
-.div-title{
-    margin-bottom: 10px;
-    font-family: 'Open Sans', sans-serif;
-}
+.container{  
+    @include adjustment;
+    .div-title{
+        margin-bottom: 10px;
+        font-family: 'Open Sans', sans-serif;
+    }
+    
+    .div-sub-title{
+        display: flex;
+        margin-top: 5px;
+        margin-bottom: 11px;
+    }
+    
+    .div-text{
+        margin-bottom: 2px;
+        margin-left: 5px;
+    }
 
-.div-sub-title{
-    display: flex;
-    margin-top: 5px;
-    margin-bottom: 11px;
-}
-
-.div-text{
-    margin-bottom: 2px;
-    margin-left: 5px;
 }
 
 .ms-3{
@@ -129,12 +57,12 @@ a{
 }
 
 .d-flex{
-    display: flex;
+    @extend display-flex;
     margin-top: 45px;
 }
 
 .d-fle{
-    display: flex;
+    @extend display-flex;
     gap: 30px;
     position: absolute;
     left: 0px;
@@ -142,19 +70,20 @@ a{
 }
 
 .icon{
-    padding-top: 3px;
-    margin-right: 3px;
-    
+    margin-right: 3px; 
 }
 
-
-
-.mr-2{
-    margin-top: 3px;
+.mt-2{
+    @include margin-top(2px);
 }
+
+.mt-1{
+    @include margin-top(1px);
+}
+
 .icon-text{
     margin-left: 6px;
-    margin-top: 2px;
+    margin-top: 5px;
     margin-right: 15px;
 }
 

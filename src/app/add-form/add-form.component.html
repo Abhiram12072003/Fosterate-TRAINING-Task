@@ -15,7 +15,8 @@
             <div class="margin">
             <div class="">
                 <label for="Name" class="form-label bold">Name<span class="text-danger">*</span></label>
-                <input type="text" class="form-control" name="userName" #username="ngModel" ngModel required>
+                <input type="text"
+                 class="form-control" name="userName" #username="ngModel" ngModel required>
                 <p class="alert alert-danger m-1" id="username" *ngIf="(username.touched && !(username.valid))">
                 Username is required</p>
             </div>

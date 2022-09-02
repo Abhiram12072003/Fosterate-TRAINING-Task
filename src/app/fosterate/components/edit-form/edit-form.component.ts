@@ -1,15 +1,15 @@
 import { Component, OnInit } from '@angular/core';
-import { Contact } from '../Contact';
-import { Contacts } from '../contact-list';
-import { FetchcontactsService } from '../fetchcontacts.service';
+import { Contact } from '../../Contact';
+import { Contacts } from '../../contact-list';
+import { FetchcontactsService } from '../../services/fetchcontacts.service';
 import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-edit',
-  templateUrl: './edit.component.html',
-  styleUrls: ['./edit.component.scss']
+  selector: 'app-edit-form',
+  templateUrl: './edit-form.component.html',
+  styleUrls: ['./edit-form.component.scss']
 })
-export class EditComponent implements OnInit {
+export class EditFormComponent implements OnInit {
 
   contacts:Contact[]=[];
   name:any;

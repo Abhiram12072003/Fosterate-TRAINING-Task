@@ -1,10 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl,FormGroup } from '@angular/forms';
-import { Contact } from '../Contact';
-import { Contacts } from '../contact-list';
-import { FetchcontactsService } from '../fetchcontacts.service';
-//import { NgModel } from '@angular/forms';
+import { Contact } from '../../Contact';
+import { Contacts } from '../../contact-list';
+import { FetchcontactsService } from '../../services/fetchcontacts.service';
+import { NgModel } from '@angular/forms';
 import { Router } from '@angular/router';
+import { NgModule } from '@angular/core';
 
 @Component({
   selector: 'app-add-form',

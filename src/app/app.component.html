@@ -1,17 +1,2 @@
-<h1 class="header" routerLink="/">Fosterate</h1>
-<div class="nav-bar">
-    <div class="nav-tabs">
-        <div class="nav-item">
-            <a routerLink="/" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}" class="na padding text me-3">HOME</a>
-            <a routerLink="/add" [routerLinkActive]="['active-add']" [routerLinkActiveOptions]="{exact:true}" class="text na padding-2" style="margin-top: 0px; padding-bottom: 10px;">+ADD</a>
-        </div>
-    </div>
-    <div class="nav-icon">
-        <img class="logo" src="../assets/images/blog-icon.png" alt="not found">
-    </div>
-</div>
-
-
-<div class="body">
-    <router-outlet></router-outlet>
-</div>
+<app-header></app-header>
+<router-outlet></router-outlet>

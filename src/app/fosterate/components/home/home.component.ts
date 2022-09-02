@@ -1,15 +1,15 @@
 import { Component, OnInit } from '@angular/core';
-import { Contacts } from '../contact-list';
-import { FetchcontactsService } from '../fetchcontacts.service';
-import { Contact } from '../Contact';
+import { Contacts } from '../../contact-list';
+import { FetchcontactsService } from '../../services/fetchcontacts.service';
+import { Contact } from '../../Contact';
 import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-contactslist',
-  templateUrl: './contactslist.component.html',
-  styleUrls: ['./contactslist.component.scss']
+  selector: 'app-home',
+  templateUrl: './home.component.html',
+  styleUrls: ['./home.component.scss']
 })
-export class ContactslistComponent implements OnInit {
+export class HomeComponent implements OnInit {
 
   contacts:Contact[]=[];
   constructor(public fetch:FetchcontactsService,private router:Router){
